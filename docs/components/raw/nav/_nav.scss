@@ -1,0 +1,29 @@
+.c-main__nav ul {
+    @extend %list--unstyled;
+    margin-bottom: 0;
+}
+.c-main__nav ul li {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    @include bp(m) {
+        text-align: right;
+        display: inline-block;
+        margin-left: space(s);
+    }
+    a {
+        display: block;
+        color: color(neutral--darker);
+        padding: space(xs);
+        border-bottom: 1px solid color(neutral--lighter);
+        @include bp(m) {
+            padding: space(m) 0;
+            border-bottom: 0;
+        }
+    }
+    a:hover,
+    a.active {
+        color: color(primary);
+        text-decoration: none;
+    }
+}

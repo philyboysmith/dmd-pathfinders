@@ -1,0 +1,31 @@
+.c-news__header {
+    margin-bottom: space(l);
+}
+
+.c-news__post {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background: white;
+    margin-bottom: space(m);
+    @include bp(m) {
+        display: flex;
+    }
+}
+
+.c-news__post-thumbnail {
+    @include bp(m) {
+        flex: 0 0 20em;
+        padding-right: space(s);
+    }
+}
+
+.c-news__post-meta {
+    font-style: italic;
+    color: color(neutral--lighter);
+}
+
+.c-news__post-content {
+    padding: space(m);
+    p:last-child {
+        margin-bottom: 0;
+    }
+}

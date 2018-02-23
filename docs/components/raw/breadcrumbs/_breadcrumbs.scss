@@ -1,0 +1,19 @@
+.c-breadcrumbs {
+    @extend %list--inline;
+    margin-bottom: space(xl);
+    li:not(:last-child)::after {
+        margin-left: 0.25em;
+        content: ">";
+    }
+}
+
+.c-breadcrumbs--white {
+    color: color(neutral--lighter);
+    a {
+        color: color(neutral--lighter);
+    }
+
+    li:not(:last-child) {
+        opacity: 0.6;
+    }
+}

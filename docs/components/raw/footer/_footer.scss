@@ -1,3 +1,52 @@
 .c-footer {
-    
+    background-color: color(primary--dark);
+    padding: space(s) 0 0;
+    color: white;
+    @include bp(l) {
+        padding-top: space(xl);
+    }
+    a {
+        color: inherit !important;
+    }
+}
+
+.c-footer__container {
+    @extend %l-container, %l-container--wide;
+}
+.c-footer__nav-list {
+    @extend %list--unstyled;
+    font-size: 1.3em;
+    @include bp(l) {
+        display: flex;
+    }
+    li {
+        flex: 1;
+        padding-right: space(l);
+    }
+}
+
+.c-footer__nav-list > li > a {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid color(primary);
+}
+
+.c-footer__nav-list ul {
+    margin-left: 0;
+    list-style: none;
+    border-bottom: 1px solid color(primary);
+    @include bp(l) {
+        border-bottom: 0;
+    }
+}
+
+.c-footer__nav-list ul > li {
+    display: inline-block;
+    @include bp(s) {
+        display: block;
+    }
 }
