@@ -1,0 +1,37 @@
+.c-search {
+    background-color: color(primary);
+    padding: space(s);
+    @include bp(l) {
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+    }
+}
+
+.c-search__input {
+    font-weight: normal;
+    border: 0;
+    background-color: transparent;
+    appearance: none;
+    border-bottom: 1px solid white;
+    outline: 0;
+    width: 100%;
+    line-height: 1.5;
+    padding-right: 2em;
+    background: url(../img/search.png) no-repeat right 5px top;
+    background-size: 16px 16px;
+    color: white;
+    font-family: $font-family--primary;
+    text-transform: uppercase;
+    @include bp(l) {
+        // font-size: 1.25rem;
+        width: 18em;
+        padding-bottom: 0.5em;
+    }
+    &::placeholder {
+        color: color(neutral--lightest);
+    }
+}
+
+.c-search__submit {
+    display: none;
+}

@@ -1,0 +1,23 @@
+.c-strip {
+    background-image: url(../img/arrows.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/arrows.png),
+        linear-gradient(-135deg, #06853e 0%, #045226 100%);
+    padding-top: space(xl);
+    padding-bottom: space(xl);
+    min-height: 14em;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        color: white;
+        max-width: 40em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+}

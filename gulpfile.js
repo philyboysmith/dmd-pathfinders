@@ -17,8 +17,6 @@ const svgStore = require("gulp-svgstore");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 
-const file = require("gulp-file");
-
 const del = require("del");
 const fractal = require("./fractal.js"); // import the Fractal instance configured in the fractal.js file
 
@@ -65,12 +63,13 @@ gulp.task("fractal:build", function() {
 });
 
 /* CSS */
-gulp.task("css:lint", () =>
-    gulp
-        .src(STYLES_WATCHLIST)
-        .pipe(plumber())
-        .pipe(sassLint())
-        .pipe(sassLint.format())
+gulp.task(
+    "css:lint",
+    () => gulp.src(STYLES_WATCHLIST)
+    // .pipe(plumber())
+    // .pipe(sassLint())
+    // .pipe(sassLint.format()
+    // )
 );
 
 gulp.task("css:process", function() {

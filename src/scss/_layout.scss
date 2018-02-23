@@ -1,0 +1,35 @@
+.l-container,
+%l-container {
+    margin-bottom: space(m);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 space(m);
+    &--narrow {
+        max-width: 800px;
+    }
+}
+.l-container--wide,
+%l-container--wide {
+    max-width: 1200px;
+}
+.l-container--flex,
+%l-container--flex {
+    display: flex;
+    flex-direction: column;
+    @include bp(l) {
+        flex-direction: row;
+    }
+}
+
+.l-container__main {
+    @include bp(m) {
+        flex: 1 0;
+        padding-right: space(xl);
+    }
+}
+
+.l-container__sidebar {
+    @include bp(m) {
+        flex: 0 1 12.5em;
+    }
+}

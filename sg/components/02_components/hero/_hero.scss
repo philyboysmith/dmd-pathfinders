@@ -1,0 +1,40 @@
+.c-hero {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    // @include bp(l) {
+    //     padding-top: 0;
+    //     padding-bottom: 33.334%;
+    //     height: 0;
+    // }
+    @include bp(xl) {
+        h1 {
+            margin-left: space(s);
+        }
+    }
+}
+
+.c-hero__container-wrapper {
+    background: color(primary);
+    @include bp(xl) {
+        background: transparent;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+.c-hero__container {
+    @extend %l-container;
+    padding-top: space(l);
+    padding-bottom: space(l);
+    @include bp(xl) {
+        > * {
+            max-width: 40rem;
+        }
+    }
+}
+
+.c-hero p {
+    margin: space(m) 0;
+    color: white;
+}

@@ -42,7 +42,7 @@ $breakpoints-queries: ();
     } @else {
         $breakpoints-queries: map-merge(
             $breakpoints-queries,
-             ($key: "#{$screen-string} and (min-width: #{em($pixels, 16)})")
+             ($key: "#{$screen-string} and (min-width: #{$pixels}px)")
         );
     }
 }
@@ -53,7 +53,7 @@ $breakpoints-queries: ();
             @content;
         }
     } @else {
-        @error 'The breakpoint you have provided `#{$media}` is not defined in $breakpoints-queries';
+        @error 'The breakpoint you have provided "#{$media}" is not defined in $breakpoints-queries';
     }
 }
 

@@ -1,3 +1,26 @@
 .c-header {
-    
+    padding-bottom: space(l);
+}
+
+.c-header__container {
+    @extend %l-container, %l-container--wide, %l-container--flex;
+    @include bp(m) {
+        justify-content: space-between;
+    }
+}
+
+.c-header__logo {
+    flex: 1 0 12.5em;
+    @include bp(m) {
+        padding: space(l) 0 0;
+    }
+}
+
+.c-header__extras {
+    @include bp(l) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
