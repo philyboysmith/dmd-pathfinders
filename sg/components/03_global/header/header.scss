@@ -4,20 +4,43 @@
 
 .c-header__container {
     @extend %l-container, %l-container--wide, %l-container--flex;
+    padding: 0;
+    // align-items: center;
     @include bp(m) {
         justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        // align-items: flex-start;
     }
 }
 
 .c-header__logo {
-    flex: 1 0 12.5em;
-    @include bp(m) {
-        padding: space(l) 0 0;
+    position: relative;
+    width: 100%;
+    img {
+        display: block;
+        // margin: 0 auto;
+    }
+    @include bp(l) {
+        flex: 1 0 12.5em;
+        img {
+            margin-top: space(l);
+        }
+        // padding: space(l) 0 0;
     }
 }
 
 .c-header__extras {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    .js-nav-active & {
+        max-height: 14em;
+    }
     @include bp(l) {
+        max-height: 9999px;
+        overflow: visible;
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-between;

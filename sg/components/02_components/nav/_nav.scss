@@ -6,10 +6,19 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;
+    position: relative;
+    a {
+        position: relative;
+        z-index: 2;
+    }
     @include bp(m) {
         text-align: right;
         display: inline-block;
         margin-left: space(s);
+        background: white;
+    }
+    @include bp(l) {
+        margin-left: space(m);
     }
     a {
         display: block;
@@ -25,5 +34,46 @@
     a.active {
         color: color(primary);
         text-decoration: none;
+    }
+    // Subnav
+    ul {
+        display: none;
+        @include bp(m) {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            border: 1px solid color(neutral);
+            opacity: 0;
+            max-height: 0;
+            visibility: hidden;
+            overflow: hidden;
+            transition: max-height 0.3s, opacity 0.1s;
+        }
+    }
+    &:hover ul {
+        opacity: 1;
+        max-height: 20em;
+        visibility: visible;
+    }
+    ul li {
+        margin-left: 0;
+        &:last-child a {
+            border-bottom: 0;
+        }
+    }
+    ul li a {
+        font-size: 15px;
+        padding-top: space(s);
+        padding-bottom: space(s);
+        display: block;
+        background: white;
+        width: 100%;
+        border-bottom: 1px solid color(neutral);
+        // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        padding-left: space(l);
+        padding-right: space(l);
+        min-width: 10em;
+        text-align: left;
     }
 }

@@ -204,7 +204,11 @@ gulp.task("build:clean", function() {
 
 gulp.task("js:process", function(cb) {
     return gulp
-        .src(["./src/js/**/*.js", "./sg/components/**/*.js"])
+        .src([
+            "./node_modules/jquery/dist/jquery.js",
+            "./src/js/**/*.js",
+            "./sg/components/**/*.js"
+        ])
         .pipe(concat("scripts.js"))
         .pipe(gulp.dest("dist/js"))
         .pipe(rename("scripts.min.js"))

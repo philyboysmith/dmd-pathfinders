@@ -1,10 +1,11 @@
 <header class="c-header">
     <div class="c-header__container">
         <div class="c-header__logo">
-            <img src="{{path '/img/logo.png'}}" alt="DMD Pathfinders" />
+            <img src="{{path '/img/logo.png'}}" alt="DMD Pathfinders" /> {{render '@menu_toggle'}}
         </div>
         <div class="c-header__extras">
             {{render '@nav'}}{{render '@search'}}
         </div>
     </div>
+
 </header>

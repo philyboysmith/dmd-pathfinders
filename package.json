@@ -21,7 +21,8 @@
         "gulp-svgmin": "^1.2.4",
         "gulp-svgstore": "^6.1.1",
         "gulp-uglify": "^3.0.0",
-        "gulp-util": "^3.0.8"
+        "gulp-util": "^3.0.8",
+        "jquery": "^1.12.4"
     },
     "devDependencies": {
         "eslint": "^4.18.1"
