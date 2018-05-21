@@ -11,9 +11,22 @@
 }
 
 .c-footer__container {
-    @extend %l-container, %l-container--wide;
+    @extend %l-container, %l-container--wide,  %l-container--flex;
+    justify-content: space-between;
+
 }
-.c-footer__nav-list {
+
+@include bp(l) {
+.c-footer__dmd {
+    text-align: center;
+    flex: 0 0 300px;
+    img {
+        max-width: 100px;
+    }
+}
+}
+.c-footer__nav-list,
+.c-footer__container > ul {
     @extend %list--unstyled;
     font-size: 1.3em;
     @include bp(l) {
@@ -22,9 +35,14 @@
     li {
         flex: 1;
         padding-right: space(l);
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
     }
 }
 
+.c-footer__container > ul > li > a,
 .c-footer__nav-list > li > a {
     font-weight: bold;
     text-transform: uppercase;

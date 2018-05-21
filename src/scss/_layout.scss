@@ -3,7 +3,8 @@
     margin-bottom: space(m);
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 space(m);
+    padding-left: space(m);
+    padding-right: space(m);
     &--narrow {
         max-width: 800px;
     }
@@ -31,5 +32,6 @@
 .l-container__sidebar {
     @include bp(m) {
         flex: 0 1 12.5em;
+        padding-right: space(m);
     }
 }
