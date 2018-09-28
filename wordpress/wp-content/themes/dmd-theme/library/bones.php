@@ -134,7 +134,7 @@ function bones_scripts_and_styles()
 
     if (!is_admin()) {
         // register main stylesheet
-        wp_register_style('styles', get_stylesheet_directory_uri() . '/assets/css/styles.css', array(), '', 'all');
+        wp_register_style('styles', get_stylesheet_directory_uri() . '/assets/css/styles.css?v1', array(), '', 'all');
 
 
         // comment reply script for threaded comments
