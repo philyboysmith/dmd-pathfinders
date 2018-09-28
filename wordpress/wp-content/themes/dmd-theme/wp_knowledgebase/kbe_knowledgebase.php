@@ -178,11 +178,7 @@ if (KBE_SIDEBAR_HOME == 0) {
                             </li><?php
 
                         endwhile; else :
-<<<<<<< HEAD
-                        echo 'No posts';
-=======
                         // echo 'No posts';
->>>>>>> 179daf2f3256e39083f19551f72746ee7242d76e
                 endif; ?></ul>
                 </div><?php
             }

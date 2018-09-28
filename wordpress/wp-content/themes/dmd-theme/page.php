@@ -34,8 +34,6 @@
             ?>
 		</section>    
 	</main>
-<<<<<<< HEAD
-=======
 
     <div class="l-container__sidebar">
     <?php 
@@ -62,7 +60,6 @@ if ($pages): ?>
 <?php endforeach; ?>
 <?php endif; ?>
 </div>
->>>>>>> 179daf2f3256e39083f19551f72746ee7242d76e
     
 </div>
 
@@ -70,9 +67,6 @@ if ($pages): ?>
 
 <?php endwhile; endif; ?>
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 179daf2f3256e39083f19551f72746ee7242d76e
 <?php get_footer(); ?>
