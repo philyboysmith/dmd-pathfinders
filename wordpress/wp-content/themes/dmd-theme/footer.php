@@ -10,11 +10,8 @@
     </div>
     <div class="bg--neutral--darkest padding-top--l padding-bottom--l">
         <div class="c-footer__container l-container--flex">
-<<<<<<< HEAD
             <div class="c-footer__meta padding-top--m " style="flex:1">
-=======
-            <div class="c-footer__meta padding-top--m ">
->>>>>>> 179daf2f3256e39083f19551f72746ee7242d76e
+            
                 <p>&copy; <?php echo date('Y')?> DMD Pathfinders Registered Charity 1155884<br />
                 Mercury House, Ham Rd, Shoreham-by-Sea BN43 6EW</p>
             </div>
@@ -30,8 +27,6 @@
 
 		<?php wp_footer(); ?>
 
-<<<<<<< HEAD
-=======
 <script>
 
 $(document).ready(function() {
@@ -41,7 +36,6 @@ if ($('.switch').length>0) {
 }});
 
 </script>
->>>>>>> 179daf2f3256e39083f19551f72746ee7242d76e
 	</body>
 
 </html> <!-- end of site. what a ride! -->

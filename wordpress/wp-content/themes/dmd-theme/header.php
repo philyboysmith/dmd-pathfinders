@@ -23,10 +23,6 @@
 
 		<?php wp_head(); ?>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 179daf2f3256e39083f19551f72746ee7242d76e
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
