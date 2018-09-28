@@ -28,6 +28,7 @@ define('DB_USER', 'root');
 /** MySQL database password */
 define('DB_PASSWORD', 'bc2faa52ff21ff84a5b2fafa8687a06802e6c366c686d544');
 
+
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
 
@@ -39,6 +40,7 @@ define('DB_COLLATE', '');
 
 define( 'WP_HOME', 'http://dmd-pathfinders.duchenneuk.org');
 define( 'WP_SITEURL', WP_HOME);
+
 
 /**#@+
  * Authentication Unique Keys and Salts.

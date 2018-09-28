@@ -90,7 +90,8 @@ p {
 }
 
 .lead,
-%lead {
+%lead,
+.content p:first-child {
     font-size: 1.125rem;
 }
 

@@ -1,14 +1,22 @@
-.c-subnav {
+.c-subnav,
+.widget {
     border-left: 4px solid color(neutral--lightest);
     padding-left: 1em;
 }
-.c-subnav__header {
+
+.widget h2 {
+    @extend %h4;
+}
+.c-subnav__header,
+.widget h2 {
     margin-bottom: space(m);
 }
-.c-subnav__list {
+.c-subnav__list,
+.kbe_widget_article ul {
     @extend %list--unstyled;
 }
-.c-subnav__list-item {
+.c-subnav__list li,
+.kbe_widget_article li {
     margin-bottom: space(m);
     a {
         position: relative;
@@ -25,6 +33,9 @@
         }
     }
     a:hover::after {
+        background-color: color(secondary);
+    }
+    &.current_page_item a::after {
         background-color: color(primary);
     }
 }

@@ -251,17 +251,25 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-selector-class">.c-subnav</span> {
+                                <pre><span class="hljs-selector-class">.c-subnav</span>,
+<span class="hljs-selector-class">.widget</span> {
     <span class="hljs-attribute">border-left</span>: <span class="hljs-number">4px</span> solid color(neutral--lightest);
     <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1em</span>;
 }
-<span class="hljs-selector-class">.c-subnav__header</span> {
+
+<span class="hljs-selector-class">.widget</span> <span class="hljs-selector-tag">h2</span> {
+    @<span class="hljs-keyword">extend</span> %h4;
+}
+<span class="hljs-selector-class">.c-subnav__header</span>,
+<span class="hljs-selector-class">.widget</span> <span class="hljs-selector-tag">h2</span> {
     <span class="hljs-attribute">margin-bottom</span>: space(m);
 }
-<span class="hljs-selector-class">.c-subnav__list</span> {
+<span class="hljs-selector-class">.c-subnav__list</span>,
+<span class="hljs-selector-class">.kbe_widget_article</span> <span class="hljs-selector-tag">ul</span> {
     @<span class="hljs-keyword">extend</span> %list--unstyled;
 }
-<span class="hljs-selector-class">.c-subnav__list-item</span> {
+<span class="hljs-selector-class">.c-subnav__list</span> <span class="hljs-selector-tag">li</span>,
+<span class="hljs-selector-class">.kbe_widget_article</span> <span class="hljs-selector-tag">li</span> {
     <span class="hljs-attribute">margin-bottom</span>: space(m);
     <span class="hljs-selector-tag">a</span> {
         <span class="hljs-attribute">position</span>: relative;
@@ -278,6 +286,9 @@
         }
     }
     <span class="hljs-selector-tag">a</span>:hover::after {
+        <span class="hljs-attribute">background-color</span>: color(secondary);
+    }
+    &amp;<span class="hljs-selector-class">.current_page_item</span> <span class="hljs-selector-tag">a</span>::after {
         <span class="hljs-attribute">background-color</span>: color(primary);
     }
 }
@@ -304,7 +315,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">830 Bytes</span>
+                    <span class="Meta-value">1 KB</span>
                 </li>
             </ul>
         </div>
