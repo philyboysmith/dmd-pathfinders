@@ -328,9 +328,22 @@
 }
 
 <span class="hljs-selector-class">.c-footer__container</span> {
-    @<span class="hljs-keyword">extend</span> %l-container, %l-container--wide;
+    @<span class="hljs-keyword">extend</span> %l-container, %l-container--wide,  %l-container--flex;
+    <span class="hljs-attribute">justify-content</span>: space-between;
+
 }
-<span class="hljs-selector-class">.c-footer__nav-list</span> {
+
+@<span class="hljs-keyword">include</span> bp(l) {
+<span class="hljs-selector-class">.c-footer__dmd</span> {
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">300px</span>;
+    <span class="hljs-selector-tag">img</span> {
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100px</span>;
+    }
+}
+}
+<span class="hljs-selector-class">.c-footer__nav-list</span>,
+<span class="hljs-selector-class">.c-footer__container</span> &gt; <span class="hljs-selector-tag">ul</span> {
     @<span class="hljs-keyword">extend</span> %list--unstyled;
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.3em</span>;
     @<span class="hljs-keyword">include</span> bp(l) {
@@ -339,9 +352,14 @@
     <span class="hljs-selector-tag">li</span> {
         <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
         <span class="hljs-attribute">padding-right</span>: space(l);
+        <span class="hljs-attribute">list-style</span>: none;
+    }
+    <span class="hljs-selector-tag">a</span> {
+        <span class="hljs-attribute">text-decoration</span>: none;
     }
 }
 
+<span class="hljs-selector-class">.c-footer__container</span> &gt; <span class="hljs-selector-tag">ul</span> &gt; <span class="hljs-selector-tag">li</span> &gt; <span class="hljs-selector-tag">a</span>,
 <span class="hljs-selector-class">.c-footer__nav-list</span> &gt; <span class="hljs-selector-tag">li</span> &gt; <span class="hljs-selector-tag">a</span> {
     <span class="hljs-attribute">font-weight</span>: bold;
     <span class="hljs-attribute">text-transform</span>: uppercase;
@@ -383,7 +401,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">983 Bytes</span>
+                    <span class="Meta-value">1.3 KB</span>
                 </li>
             </ul>
         </div>

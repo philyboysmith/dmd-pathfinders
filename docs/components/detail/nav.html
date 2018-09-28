@@ -308,7 +308,8 @@
         }
     }
     <span class="hljs-selector-tag">a</span>:hover,
-    <span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.active</span> {
+    &amp;<span class="hljs-selector-class">.current_page_item</span> <span class="hljs-selector-tag">a</span>,
+    &amp;<span class="hljs-selector-class">.current_page_ancestor</span> <span class="hljs-selector-tag">a</span> {
         <span class="hljs-attribute">color</span>: color(primary);
         <span class="hljs-attribute">text-decoration</span>: none;
     }
@@ -335,6 +336,7 @@
     }
     <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> {
         <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
         &amp;:last-child <span class="hljs-selector-tag">a</span> {
             <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span>;
         }

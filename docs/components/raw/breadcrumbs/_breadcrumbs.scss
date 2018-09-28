@@ -1,13 +1,18 @@
-.c-breadcrumbs {
+.c-breadcrumbs,
+.kbe_breadcrum ul {
     @extend %list--inline;
     margin-bottom: space(xl);
+    li.separator {
+        display: none !important;
+    }
     li:not(:last-child)::after {
         margin-left: 0.25em;
         content: ">";
     }
 }
 
-.c-breadcrumbs--white {
+.c-breadcrumbs--white,
+.kbe_breadcrum ul {
     color: color(neutral--lighter);
     a {
         color: color(neutral--lighter);

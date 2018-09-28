@@ -7,3 +7,179 @@
 @import "base";
 
 @import "../../sg/components/**/*.scss";
+
+
+.collapseomatic {
+    background-image: url(images/arrow-down.png);
+    background-repeat: no-repeat;
+    padding: 0 0 10px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    padding-left: 26px;
+    margin: 0;
+    background-position: center left;
+    border: 1px solid #b9b9c0;
+    border-radius: 4px;
+    padding: 12px!important;
+    border-left-width: 5px;
+    background-image: none!important;
+    position: relative;
+}
+
+.collapseomatic::after {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    height: 24px;
+    width: 13px;
+    margin-top: -12px;
+    background-image: url(../img/arrow-right.png);
+    content: "";
+    background-size: cover;
+    transition: transform 0.2s;
+}
+.colomat-close::after {
+    transform: rotate(90deg);
+}
+
+.collapseomatic_content  {
+    padding-bottom: 24px;
+}
+
+.c-card {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        background: white;
+        margin-bottom: space(m);
+        display: block;
+        border-radius: 4px;
+        overflow: hidden;
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+}
+.c-card__content {
+    p {
+        margin-bottom: 0;
+    }
+    padding: 0.25em 0.75em;
+}
+
+#kbe_content .kbe_leftcol ul li {
+    font-size: 1rem!important;
+    line-height: 1.5rem!important;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+#kbe_content .kbe_leftcol .kbe_child_article_list li a {
+    font-size: 16px;
+}

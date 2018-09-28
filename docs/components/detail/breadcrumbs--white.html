@@ -221,16 +221,21 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-selector-class">.c-breadcrumbs</span> {
+                                <pre><span class="hljs-selector-class">.c-breadcrumbs</span>,
+<span class="hljs-selector-class">.kbe_breadcrum</span> <span class="hljs-selector-tag">ul</span> {
     @<span class="hljs-keyword">extend</span> %list--inline;
     <span class="hljs-attribute">margin-bottom</span>: space(xl);
+    <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.separator</span> {
+        <span class="hljs-attribute">display</span>: none <span class="hljs-meta">!important</span>;
+    }
     <span class="hljs-selector-tag">li</span>:not(:last-child)::after {
         <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0.25em</span>;
         <span class="hljs-attribute">content</span>: <span class="hljs-string">"&gt;"</span>;
     }
 }
 
-<span class="hljs-selector-class">.c-breadcrumbs--white</span> {
+<span class="hljs-selector-class">.c-breadcrumbs--white</span>,
+<span class="hljs-selector-class">.kbe_breadcrum</span> <span class="hljs-selector-tag">ul</span> {
     <span class="hljs-attribute">color</span>: color(neutral--lighter);
     <span class="hljs-selector-tag">a</span> {
         <span class="hljs-attribute">color</span>: color(neutral--lighter);
@@ -256,7 +261,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">338 Bytes</span>
+                    <span class="Meta-value">435 Bytes</span>
                 </li>
             </ul>
         </div>
