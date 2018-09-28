@@ -1,0 +1,16 @@
+{
+    "name": "philsmith/dmd-pathfinders",
+    "description": "Wordpress install for DMD pathfinders",
+    "authors": [
+        {
+            "name": "Phil Smith",
+            "email": "phil@amillionmonkeys.co.uk"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "4.2"
+    },
+    "extra": {
+        "wordpress-install-dir": "wordpress"
+    }
+}
