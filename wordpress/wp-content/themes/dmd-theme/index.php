@@ -44,9 +44,12 @@
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                 <article class="c-news__post  c-news__post--excerpt">
-                    <div class="c-news__post-thumbnail">
-                        <img src="http://via.placeholder.com/300x200" alt="">
-                    </div>
+				<?php
+                if (has_post_thumbnail()) { ?>
+					<div class="c-news__post-thumbnail">
+						<?php the_post_thumbnail('hero'); ?>
+					</div>
+                <?php } ?>
                     <div class="c-news__post-content">
                         <h3 class="c-news__post-title">
 							<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
