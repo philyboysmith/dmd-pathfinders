@@ -180,6 +180,11 @@ a img.aligncenter {
 	/* Above WP toolbar. */
 }
 
-#kbe_content .kbe_leftcol .kbe_child_article_list li a {
-    font-size: 16px;
+#kbe_content .kbe_leftcol .kbe_child_article_list li a,
+#kbe_content .kbe_leftcol .kbe_articles ul li a {
+    font-size: $font-size--base;
+}
+
+#kbe_content {
+    margin-bottom: space(xl);
 }

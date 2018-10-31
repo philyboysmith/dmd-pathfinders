@@ -28,7 +28,7 @@
 .c-footer__nav-list,
 .c-footer__container > ul {
     @extend %list--unstyled;
-    font-size: 1.3em;
+    // font-size: 1.3em;
     @include bp(l) {
         display: flex;
     }

@@ -26,7 +26,7 @@ define('DB_NAME', 'dmd');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'bc2faa52ff21ff84a5b2fafa8687a06802e6c366c686d544');
+define('DB_PASSWORD', '');
 
 
 /** MySQL hostname */
@@ -38,7 +38,7 @@ define('DB_CHARSET', 'utf8mb4');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-define( 'WP_HOME', 'http://dmd-pathfinders.duchenneuk.org');
+define( 'WP_HOME', 'http://pathfinders.test');
 define( 'WP_SITEURL', WP_HOME);
 
 

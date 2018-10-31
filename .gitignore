@@ -3,3 +3,5 @@ node_modules/
 .DS_Store
 dist
 /vendor/
+wordpress/wp-config.php
+wordpress/wp-content/themes/dmd-theme/assets
