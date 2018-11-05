@@ -33,8 +33,7 @@
                     
                     $args = array(
                         'posts_per_page' => 3,
-                        'orderby' => 'date',
-                        'order' => 'ASC'
+                    
                     );
                     query_posts($args);
                     
