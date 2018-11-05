@@ -35,7 +35,6 @@
 		</section>    
 	</main>
 
-    <div class="l-container__sidebar">
     <?php 
 
 // vars
@@ -45,6 +44,7 @@ $pages = get_field('related_pages');
 
 // check
 if ($pages): ?>
+    <div class="l-container__sidebar">
 
 	<?php foreach ($pages as $page): ?>
 
@@ -58,8 +58,9 @@ if ($pages): ?>
 </div>
 </a>
 <?php endforeach; ?>
-<?php endif; ?>
 </div>
+
+<?php endif; ?>
     
 </div>
 
