@@ -12,6 +12,31 @@
             <p><?php the_field('hero_body'); ?></p>
         </div>
     </div>
+    <?php 
+
+$image = get_field('hero_image');
+$size = 'hero'; // (thumbnail, medium, large, full or custom size)
+
+if( $image ) { ?>
+
+<div class="hero__image">
+	<?php echo wp_get_attachment_image( $image, $size);?>
+</div>
+
+<?php }
+
+?>
+
+    <div class="space-bottom--l">
+		<div class="c-hero">
+			<div class="hero__image">
+				<?php
+                if (has_post_thumbnail()) {
+                    the_post_thumbnail('hero');
+                } ?>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="l-container  l-container--flex padding-bottom--xl">

@@ -75,7 +75,7 @@ if (! isset($content_width)) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size('hero', 2000, 745);
+add_image_size('hero', 2000, 2000);
 
 /*
 to add more sizes, simply copy a line from above

@@ -1,16 +1,14 @@
 <?php get_header(); ?>
 
-
 <div class="space-bottom--l">
     <div class="c-strip">
-        <div class="l-container">
+	<div class="l-container">
 			<?php custom_breadcrumbs(); ?>
-			<h1 itemprop="headline" class="align-center">News</h1>
+			<h1 itemprop="headline"><?php the_field('hero_title', 13); ?></h1>
+            <p><?php the_field('hero_body', 13); ?></p>
         </div>
     </div>
-</div>
 
-<div class="l-container">
 	
 	<div class="space-bottom--l">
 		<div class="c-hero">
@@ -32,6 +30,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<div class="l-container  l-container--flex padding-bottom--xl">
@@ -83,5 +82,4 @@
 		<?php get_sidebar(); ?>    
 	</div>
 </div>
-			</div>
 <?php get_footer(); ?>
