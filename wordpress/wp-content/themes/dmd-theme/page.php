@@ -26,7 +26,11 @@ if( $image ) { ?>
 <?php }
 
 ?>
-
+<style>
+    .hero__image img {
+        width: 100%;
+    }
+</style>
     <div class="space-bottom--l">
 		<div class="c-hero">
 			<div class="hero__image">

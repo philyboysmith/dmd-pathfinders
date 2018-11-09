@@ -17,7 +17,7 @@
             </div>
             <div class="c-footer__dmd text-center">
                 <p>Supported by:<br />
-                <a href="https://www.duchenneuk.org/" target="_blank"><img src="http://hercules.duchenneuk.org/assets/img/duchenne_logo.svg" alt="duchenne uk"/></a>
+                <a href="https://www.duchenneuk.org/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/duchenne_logo.svg" alt="duchenne uk"/></a>
                 </p>
             </div>
         </div>
