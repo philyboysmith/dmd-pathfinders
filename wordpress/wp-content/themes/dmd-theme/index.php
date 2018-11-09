@@ -31,7 +31,7 @@
 			</div>
 		</div>
 	</div>
-	</div>
+</div>
 
 	<div class="l-container  l-container--flex padding-bottom--xl">
     <main class="l-container__main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
