@@ -53,7 +53,12 @@
                         )); ?>
 
 					</nav>
+					<div style="display: flex">
+<a style="margin-right: 1em;" href="https://uk.virginmoneygiving.com/donation-web/charity?charityId=1017207&donationAmount=5&frequencyType=M&utm_source=extbtn&utm_campaign=donatebtn" target="_blank" title="Donate to us (Link opens in a new window)">
+<img src="https://uk.virginmoneygiving.com/giving/assets/buttons/DONATE_RED_BUTTON@1x.png" alt="Make a donation using Virgin Money Giving"/>
+</a>
 					<?php get_search_form(); ?>
+</div>
 					
 				</div>
 			</div>

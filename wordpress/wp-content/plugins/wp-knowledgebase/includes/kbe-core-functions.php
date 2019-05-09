@@ -1,7 +1,5 @@
 <?php
-if (! defined('ABSPATH')) {
-    exit;
-} // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
  * Enqueue scripts.
@@ -10,20 +8,19 @@ if (! defined('ABSPATH')) {
  *
  * @since 1.0
  */
-function kbe_styles()
-{
-    if (file_exists(get_stylesheet_directory() . '/wp_knowledgebase/kbe_style.css')) {
-        $stylesheet = get_stylesheet_directory_uri() . '/wp_knowledgebase/kbe_style.css';
-    } else {
-        $stylesheet = WP_KNOWLEDGEBASE . 'template/kbe_style.css';
-    }
-    wp_register_style('kbe_theme_style', $stylesheet, array(), KBE_PLUGIN_VERSION);
-    wp_enqueue_style('kbe_theme_style');
+function kbe_styles() {
+	if ( file_exists( get_stylesheet_directory() . '/wp_knowledgebase/kbe_style.css' ) ) {
+		$stylesheet = get_stylesheet_directory_uri() . '/wp_knowledgebase/kbe_style.css';
+	} else {
+		$stylesheet = WP_KNOWLEDGEBASE . 'template/kbe_style.css';
+	}
+	wp_register_style( 'kbe_theme_style', $stylesheet, array(), KBE_PLUGIN_VERSION );
+	wp_enqueue_style( 'kbe_theme_style' );
 
-    wp_register_script('kbe_live_search', WP_KNOWLEDGEBASE . '/assets/js/jquery.livesearch.js', [], KBE_PLUGIN_VERSION, true);
-    wp_enqueue_script('kbe_live_search');
+	wp_register_script( 'kbe_live_search', WP_KNOWLEDGEBASE . '/assets/js/jquery.livesearch.js', array( 'jquery' ), KBE_PLUGIN_VERSION, true );
+	wp_enqueue_script( 'kbe_live_search' );
 }
-add_action('wp_enqueue_scripts', 'kbe_styles');
+add_action( 'wp_enqueue_scripts', 'kbe_styles' );
 
 /**
  * Register widget area.
@@ -32,19 +29,18 @@ add_action('wp_enqueue_scripts', 'kbe_styles');
  *
  * @since 1.0
  */
-function kbe_register_sidebar()
-{
-    register_sidebar(array(
-        'name'          => __('WP Knowledgebase Sidebar', 'wp-knowledgebase'),
-        'id'            => 'kbe_cat_widget',
-        'description'   => __('WP Knowledgebase sidebar area', 'wp-knowledgebase'),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '<h6>',
-        'after_title'   => '</h6>',
-    ));
+function kbe_register_sidebar() {
+	register_sidebar( array(
+		'name'          => __( 'WP Knowledgebase Sidebar', 'wp-knowledgebase' ),
+		'id'            => 'kbe_cat_widget',
+		'description'   => __( 'WP Knowledgebase sidebar area', 'wp-knowledgebase' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h6>',
+		'after_title'   => '</h6>',
+	) );
 }
-add_action('widgets_init', 'kbe_register_sidebar');
+add_action( 'widgets_init', 'kbe_register_sidebar' );
 
 /**
  * Required search JS code.
@@ -53,10 +49,9 @@ add_action('widgets_init', 'kbe_register_sidebar');
  *
  * @since 1.0
  */
-function kbe_search_drop()
-{
-    if (KBE_SEARCH_SETTING == 1) {
-        ?><script type="text/javascript">
+function kbe_search_drop() {
+	if ( KBE_SEARCH_SETTING == 1 ) {
+		?><script type="text/javascript">
 			jQuery(document).ready(function() {
 				jQuery('#s').keyup(function() {
 					jQuery('#search-result').slideDown("slow");
@@ -81,7 +76,7 @@ function kbe_search_drop()
 			jQuery(document).ready(function () {
 
 				var tree_id = 0;
-				jQuery('div.kbe_category:has(.kbe_child_category)').addClass('has-child').prepend('<span class="switch"><img src="<?php echo plugins_url('../template/images/kbe_icon-plus.png', __FILE__); ?>" /></span>').each(function () {
+				jQuery('div.kbe_category:has(.kbe_child_category)').addClass('has-child').prepend('<span class="switch"><img src="<?php echo plugins_url( '../template/images/kbe_icon-plus.png', __FILE__ ); ?>" /></span>').each(function () {
 					tree_id++;
 					jQuery(this).attr('id', 'tree' + tree_id);
 				});
@@ -91,10 +86,10 @@ function kbe_search_drop()
 					if (jQuery(this).hasClass('open')) {
 						jQuery(this).parent().find('div:first').slideUp('fast');
 						jQuery(this).removeClass('open');
-						jQuery(this).html('<img src="<?php echo plugins_url('../template/images/kbe_icon-plus.png', __FILE__); ?>" />');
+						jQuery(this).html('<img src="<?php echo plugins_url( '../template/images/kbe_icon-plus.png', __FILE__ ); ?>" />');
 					} else {
 						jQuery(this).parent().find('div:first').slideDown('fast');
-						jQuery(this).html('<img src="<?php echo plugins_url('../template/images/kbe_icon-minus.png', __FILE__); ?>" />');
+						jQuery(this).html('<img src="<?php echo plugins_url( '../template/images/kbe_icon-minus.png', __FILE__ ); ?>" />');
 						jQuery(this).addClass('open');
 					}
 				});
@@ -102,17 +97,18 @@ function kbe_search_drop()
 			});
 		</script><?php
 
-        if ((KBE_SEARCH_SETTING == 1) && (wp_script_is('kbe_live_search', 'enqueued'))) {
-            ?><script type="text/javascript">
+		if ( ( KBE_SEARCH_SETTING == 1 ) && ( wp_script_is( 'kbe_live_search', 'enqueued' ) ) ) {
+
+			?><script type="text/javascript">
 				jQuery(document).ready(function() {
 					var kbe = jQuery('#live-search #s').val();
 					jQuery('#live-search #s').liveSearch({url: '<?php echo home_url(); ?>/?ajax=on&post_type=kbe_knowledgebase&s='});
 				});
 			</script><?php
-        }
-    }
+		}
+	}
 }
-add_action('wp_footer', 'kbe_search_drop');
+add_action( 'wp_footer', 'kbe_search_drop' );
 
 /**
  * Knowledgebase shortcode.
@@ -125,15 +121,14 @@ add_action('wp_footer', 'kbe_search_drop');
  * @param null $content Content passed through the shortcode.
  * @return mixed Knowledgebase page contents.
  */
-function kbe_shortcode($atts, $content = null)
-{
-    if (!is_admin()) {
-        $return_string = require dirname(__FILE__) . '/../template/kbe_knowledgebase.php';
-        wp_reset_query();
-        return $return_string;
-    }
+function kbe_shortcode( $atts, $content = null ) {
+	if ( !is_admin() ) {
+		$return_string = require dirname( __FILE__ ) . '/../template/kbe_knowledgebase.php';
+		wp_reset_query();
+		return $return_string;
+	}
 }
-add_shortcode('kbe_knowledgebase', 'kbe_shortcode');
+add_shortcode( 'kbe_knowledgebase', 'kbe_shortcode' );
 
 /**
  * Dynamic CSS.
@@ -143,10 +138,9 @@ add_shortcode('kbe_knowledgebase', 'kbe_shortcode');
  *
  * @since 1.0
  */
-function kbe_count_bg_color()
-{
-    if (KBE_BG_COLOR) {
-        $dynamic_css = '
+function kbe_count_bg_color() {
+	if ( KBE_BG_COLOR ) {
+		$dynamic_css = '
 			#kbe_content h2 span.kbe_count,
 			#kbe_content .kbe_child_category h3 span.kbe_count {
 				background-color: ' . KBE_BG_COLOR . ' !important;
@@ -157,10 +151,10 @@ function kbe_count_bg_color()
 				color: ' . KBE_BG_COLOR . ' !important;
 			}
 		';
-        wp_add_inline_style('kbe_theme_style', $dynamic_css);
-    }
+		wp_add_inline_style( 'kbe_theme_style', $dynamic_css );
+	}
 }
-add_action('wp_enqueue_scripts', 'kbe_count_bg_color');
+add_action( 'wp_enqueue_scripts', 'kbe_count_bg_color' );
 
 /**
  * Get page ID of KB.
@@ -171,9 +165,8 @@ add_action('wp_enqueue_scripts', 'kbe_count_bg_color');
  *
  * @return int|bool Post ID when it has been found, false otherwise.
  */
-function kbe_get_knowledgebase_page_id()
-{
-    return get_option('kbe_plugin_slug', false);
+function kbe_get_knowledgebase_page_id() {
+	return get_option( 'kbe_plugin_slug', false );
 }
 
 /**
@@ -188,15 +181,14 @@ function kbe_get_knowledgebase_page_id()
  *
  * @return string string to replace $orderby
  */
-function kbe_tax_order($orderby, $args)
-{
-    $kbe_tax = 'kbe_taxonomy';
-    if ($args['orderby'] == 'terms_order') {
-        return 't.terms_order';
-    } elseif ($kbe_tax == 1 && ! isset($_GET['orderby'])) {
-        return 't.terms_order';
-    } else {
-        return $orderby;
-    }
+function kbe_tax_order( $orderby, $args ) {
+	$kbe_tax = 'kbe_taxonomy';
+	if ( $args['orderby'] == 'terms_order' ) {
+		return 't.terms_order';
+	} elseif ( $kbe_tax == 1 && ! isset( $_GET['orderby'] ) ) {
+		return 't.terms_order';
+	} else {
+		return $orderby;
+	}
 }
-add_filter('get_terms_orderby', 'kbe_tax_order', 10, 2);
+add_filter( 'get_terms_orderby', 'kbe_tax_order', 10, 2 );
